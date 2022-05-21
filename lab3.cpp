@@ -19,7 +19,7 @@ Polar(double radius , double radian){
   else if(radian == 0){ x= radius ; y=0;theta = radian;}
   else if(radian == (3*pi)/2){
      y= -1*radius ;
-      x = 0 ; theta = radian;
+      x = 0 ; theta = (-1 * pi)/2;
 
   }
   else if(radian ==pi){ y=0 ; x=-1*radius ;theta = radian;}
@@ -54,9 +54,9 @@ double radius = pow(radius2 , 0.5) ;
 double rad = atan(abs(fy/fx)) ;
 // cout<<radius<<" "<<rad<<endl;
 if(fy>=0 and fx>=0){rad = rad; }
-else if(fy<=0 and fx<=0){rad =  pi + rad; }
+else if(fy<=0 and fx<=0){rad =  rad - pi; }
 else if(fy>=0 and fx<=0){rad = pi -  rad; }
-else if(fy<=0 and fx>=0){rad = 2*pi - rad; }
+else if(fy<=0 and fx>=0){rad = -1 * rad; }
 
 Polar crazyxyz(radius , rad) ;
 return crazyxyz ;
@@ -75,9 +75,9 @@ double radius = pow(radius2 , 0.5) ;
 double rad = atan(abs(yy/xx)) ;
 // cout<<radius<<" "<<rad<<endl;
 if(yy>=0 and xx>=0){rad = rad; }
-else if(yy<=0 and xx<=0){rad =  pi + rad; }
+else if(yy<=0 and xx<=0){rad = rad - pi; }
 else if(yy>=0 and xx<=0){rad = pi -  rad; }
-else if(yy<=0 and xx>=0){rad = 2*pi - rad; }
+else if(yy<=0 and xx>=0){rad = -1 * rad; }
 Polar xyz(radius , rad) ;
 return xyz;
 }
